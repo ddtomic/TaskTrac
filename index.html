@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTrac</title>
+
+    <!-- Linking Stylesheet -->
+    <link rel = "stylesheet" href = "styles.css">
+
+    <!-- Linking JavaScript, used defer to load webpage first -->
+    <script defer src = "app.js"></script>
+
+    <!-- Linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="todolist">
+        <h2>TaskTrac</h2>
+
+            <!-- Row Where Tasks Are inputted/typed out by user -->
+            <div class="inputrow">
+                <input type = "text" id = "input-box" placeholder = "What do you need to do?">
+                <input type = "date" id = "input-date">
+                <button onclick = "addTask()" type = "button" id = "add-button">Add</button>
+            </div>
+
+
+        <ul id ="list-container">
+            <!-- This is where JavaScript inputs all the tasks as li elements. -->
+            <!-- Delete button will also be injected in here. -->
+        </ul>
+
+        </div>
+    </div>
+</body>
+</html>

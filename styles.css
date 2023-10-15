@@ -1,0 +1,161 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background */
+.container
+{
+    /* Set Background Sizing and Centering content */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* Linear Gradient for background */
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+/* ---------------------Main To Do list Container --------------------- */
+
+
+/* Main Header Title "TaskTrac" */
+h2
+{
+    padding-bottom: 10px;
+}
+
+.todolist
+{
+    width: 100%;
+    max-width: 35rem;
+
+    background: white;
+    padding: 2.5rem 1.875rem 4.375rem;
+    border-radius: 1rem;
+    
+}
+
+/* Task and Date input boxes */
+#input-box
+{
+    width: 15rem;
+    height: 2rem;
+    border:0;
+    outline:0;
+
+    background-color: rgb(243, 242, 242);
+    border-radius: 5rem;
+}
+
+
+/* Moves Placeholder text over */
+input{
+    padding-left: 0.625rem;
+}
+
+/* Date Field */
+#input-date
+{
+    height: 2rem;
+    border:0;
+    outline:0;
+
+    /* Overlaps Date field over text field*/
+    margin-left: -1.875rem;
+
+    background-color: rgb(243, 242, 242);
+    border-radius: 5em;
+    padding-right: 0.625rem;
+}
+
+
+/* Changes Placholder color for date field */
+input[type=date] 
+{
+    color: gray;
+}
+
+/* Styles the add button */
+#add-button{
+    position: absolute;
+    margin-left: 0.938rem;
+    height: 2rem;
+    width: 7rem;
+    border: 0;
+    outline: 0;
+
+    border-radius: 5rem;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
+
+/* moves list container down */
+#list-container{
+    padding-top: 1rem;
+}
+
+/*Styling list*/
+ul li{
+    /* Removing default bullet points*/
+    list-style: none;
+
+    font-size: 1rem;
+    padding: .75rem .5rem .75rem 3.125rem;
+
+    /* Formatting for tasks */
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+
+}
+
+/* ADDING BUTTON FOR CHECKMARK */
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 1.75rem;
+    width:1.75rem;
+    border-radius: 50%;
+
+    /* see images folder */
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+
+    top: .75rem;
+    left: .5rem;
+}
+
+/* adds strikethrough on text when checked */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* changes image to checked image when checked */
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+/* formatting for delete button */
+p{
+    margin-left: 25rem;
+    color: #555;
+    position: absolute;
+}
+
+/* adding hover effect on delete button */
+p:hover{
+    color: red;
+}
+
+
